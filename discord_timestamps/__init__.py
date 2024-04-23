@@ -42,4 +42,4 @@ def format_timestamp(
         int_timestamp = int(timestamp.timestamp())
 
     # Combine the timestamp and the format
-    return f"<t:{int_timestamp}:{timestamp_type.value}>"
+    return f"<t:{int_timestamp}{timestamp_type.value}>"
