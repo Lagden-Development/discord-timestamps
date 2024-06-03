@@ -8,6 +8,7 @@ from .formats import TimestampType
 
 __version__ = "1.0.2"
 
+
 def format_timestamp(
     timestamp: Union[int, float, Arrow, datetime.datetime],
     timestamp_type: TimestampType = TimestampType.SHORT_DATETIME,
@@ -32,7 +33,7 @@ def format_timestamp(
 
     elif isinstance(timestamp, Arrow):
         # The timestamp is an Arrow object, convert it to an int in UTC
-        int_timestamp = timestamp.to('UTC').int_timestamp
+        int_timestamp = timestamp.to("UTC").int_timestamp
 
     elif isinstance(timestamp, datetime.datetime):
         # The timestamp is a datetime object, convert it to UTC if not already, then to int
